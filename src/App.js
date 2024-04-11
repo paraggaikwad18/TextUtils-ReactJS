@@ -48,7 +48,7 @@ function App() {
     <div className="container my-3">
     {/* <Switch>
           <Route path="/about"> */}
-            <About mode = {mode}/>
+            {/* <About mode = {mode}/> */}
           {/* </Route> */}
           {/* <Route path="/"> */}
             <TextForm showAlert= {showAlert} heading = "Enter Amazing Text to Analyze" mode = {mode}/>
