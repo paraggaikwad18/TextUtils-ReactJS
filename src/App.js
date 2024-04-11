@@ -1,15 +1,15 @@
 
 import { useState } from 'react';
 import './App.css';
-// import About from './component/About';
+import About from './component/About';
 import Navbar from './component/Navbar';
 import TextForm from './component/TextForm';
 import Alert from './component/Alert';
 
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route} from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route} from "react-router-dom";
 
 function App() {
   //to set the mode
@@ -41,21 +41,21 @@ function App() {
   }
   return (
   <>
-  {/* <Router> */}
+  <Router>
     {/* <Navbar title= "textUtils" about = "About TextUtils" /> */}
     <Navbar title= "textUtils" mode = {mode} toggleMode={toggleMode}/>
     {<Alert alert={alert} />}
     <div className="container my-3">
-    {/* <Switch> */}
-          {/* <Route path="/about">
-            <About/>
+    <Switch>
+          <Route path="/about">
+            <About mode = {mode}/>
           </Route>
-          <Route path="/"> */}
+          <Route path="/">
             <TextForm showAlert= {showAlert} heading = "Enter Amazing Text to Analyze" mode = {mode}/>
-          {/* </Route>
-        </Switch>    */}
+          </Route>
+        </Switch>   
     </div>
-  {/* </Router> */}
+  </Router>
   </>
   );
 }
